@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-//import { RegistrationcomponentComponent } from './registrationcomponent/registrationcomponent.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
+  { path: 'registration', component: RegistrationComponent },
 ];
 
 @NgModule({
@@ -10,4 +11,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-//export const RoutinComponents=[RegistrationcomponentComponent];

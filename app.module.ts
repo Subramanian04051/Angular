@@ -1,34 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { AppRoutingModule} from './app-routing.module';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import { RouterModule,Routes } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
-import { FormsModule } from '@angular/forms';
-import {InputTextModule} from 'primeng/inputtext';
-//import {ButtonModule} from 'primeng/button';
+import { Routes, RouterModule } from '@angular/router';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
+
 const routes: Routes = [
-  {path:'register', component:RegistrationComponent }
+  { path: 'registration', component: RegistrationComponent }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,RegistrationComponent
+    AppComponent,
+    RegistrationComponent
   ],
   imports: [
-    BrowserModule,MatButtonModule,MatCardModule,MatIconModule,MatToolbarModule,MatSidenavModule,MatListModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,RouterModule.forRoot(routes),FormsModule,InputTextModule
+    BrowserModule,
+    AppRoutingModule,MatToolbarModule,MatButtonModule,MatListModule,MatIconModule,RouterModule.forRoot(routes),MatFormFieldModule,MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
- }
+export class AppModule { }

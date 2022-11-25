@@ -1,22 +1,9 @@
-<mat-toolbar style="background-color:black;" class="mat-elevation-z5">
-  <span id="title">My First App for students</span>
-<mat-toolbar-row>
-  <span class="icon-spacer"></span>
-  <button mat-icon-button><mat-icon class="example-icon">home</mat-icon></button>
-  <button mat-icon-button><mat-icon class="example-icon">settings</mat-icon></button>
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav opened>
-    <mat-nav-list style="width:200px;">
-      <a  class="side-nav-icons" mat-list-item routerLink='register' style="height:50px;"><mat-icon>exit_to_app</mat-icon>Register</a>
-      <a  class="side-nav-icons" mat-list-item style="height:50px;"><mat-icon>login</mat-icon>login</a>
-    </mat-nav-list>
-  </mat-sidenav>
-    <mat-sidenav-content>
-      <p style="height:88vh">
-        <router-outlet></router-outlet>
-      </p>
-    </mat-sidenav-content> 
-</mat-sidenav-container>
-
+<mat-toolbar style="background-color:lightgreen">
+  <span class="title">Student Web Application</span>
+  <mat-toolbar-row>
+    <a mat-button class="buttons" routerLink="/registration" style="width:70px;">Register</a>
+    <a mat-button class="buttons" >Login</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  
