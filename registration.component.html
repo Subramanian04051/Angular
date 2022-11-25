@@ -1,27 +1,38 @@
-<div class="registartion-form-grid">
-    <div class=".col-md-">
-        <span class="p-float-label">
-            <input type="text" id="name" pInputText [(ngModel)]="name"> 
-            <label for="name">Name</label>
-        </span>
+<div class="form-container">  
+      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter your Name" id="name" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Dept</mat-label>
+          <input  matInput placeholder="Enter your Department" id="dept" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Enter the State" id="state" value="">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Mailid</mat-label>
+        <input matInput placeholder="xyz@gmail.com" id="mail" value="">
+      </mat-form-field>
+      <mat-form-field>
+        <button mat-raised-button (click)="PrintValue()" class="submit">Register</button>
+      </mat-form-field>
     </div>
-    <div class="field col-12 md:col-8">
-        <span class="p-float-label">
-            <input type="text" id="dept" pInputText [(ngModel)]="Dept"> 
-            <label for="dept">Dept</label>
-        </span>
-    </div>
-    <div class="field col-12 md:col-8">
-        <span class="p-float-label">
-            <input type="text" id="mailid" pInputText [(ngModel)]="mailid"> 
-            <label for="mailid">MailId</label>
-        </span>
-    </div>
-    <div class="field col-12 md:col-8">
-        <span class="p-float-label">
-            <input type="text" id="state" pInputText [(ngModel)]="state"> 
-            <label for="state">state</label>
-        </span>
-    </div>
-    <button class="register">Register</button>
+    <div class="result">
+        <table>
+            <tr>           
+             <td>Name</td>
+            <td>Dept</td>
+            <td>State</td>
+            <td>Mail</td>
+        </tr>
+            <tr *ngFor="let sd of students" >
+                <td>{{sd.name}}</td>
+                <td>{{sd.dept}}</td>
+                <td>{{sd.state}}</td>
+                <td>{{sd.mail}}</td>
+            </tr>
+        </table>
     </div>
