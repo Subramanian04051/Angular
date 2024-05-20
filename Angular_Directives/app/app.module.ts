@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IfSwitchComponent } from './if-switch/if-switch.component';
+import { IfSwitchComponent } from './if-switch/if-switch-for.component';
 
 @NgModule({
   declarations: [
