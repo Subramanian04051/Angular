@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form [formGroup]="logform">
+<label>Username</label>
+<input type="text" formControlName="UserName"  placeholder="Enter username" class="form-control"/>
+<label>Password</label>
+<input type="text" formControlName="Password" placeholder="Enter Password" class="form-control"/>
+<button type="submit" (click)="CallApi()">Api call</button>
+</form>
+</body>
+</html>
